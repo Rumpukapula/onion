@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="playerDAO" class="fi.onion.dao.impl.PlayerJDBC">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+ 
+ 	<bean id="handDAO" class="fi.onion.dao.impl.HandJDBC">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="userDAO" class="fi.onion.dao.impl.UserJDBC">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+ 
+</beans>
